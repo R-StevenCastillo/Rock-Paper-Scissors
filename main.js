@@ -20,34 +20,8 @@ function getComputerChoice(computerSelection) {
     }
 }
 
-function getPlayerChoice(playerSelection) {
-    const randomNum = Math.floor(Math.random() * 3) + 1;
-
-    switch (randomNum) {
-        case 1:
-            playerSelection = "Rock";
-            return playerSelection;
-            break;
-        case 2:
-            playerSelection = "Paper";
-            return playerSelection;
-            break;
-        case 3:
-            playerSelection = "Scissor";
-            return playerSelection;
-            break;
-        default:
-            console.log("How?");
-            break;
-    }
-}
-
-
-
-function playRound(player = getPlayerChoice(), computer = getComputerChoice()) {
+function playRound(player, computer) {
     let result
-    console.log(player);
-    console.log(computer);
     if (player === computer) {
         result = "It's a tie";
         return result;
@@ -81,5 +55,10 @@ function playRound(player = getPlayerChoice(), computer = getComputerChoice()) {
 }
 
 for (let i = 0; i < 5; i++) {
-    console.log(playRound());
+    let playerSelectionPrompt = prompt("Rock, Paper or Scissor?");
+    let playerSelection = playerSelectionPrompt.charAt(0).toUpperCase() + playerSelectionPrompt.slice(1);
+    let computerChoice = getComputerChoice()
+    console.log(playerSelection);
+    console.log(computerChoice);
+    console.log(playRound(playerSelection, computerChoice));
 }
