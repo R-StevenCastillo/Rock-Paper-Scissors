@@ -2,7 +2,6 @@
 * {
     margin: 0;
     padding: 0;
-    /*border: 1px solid red;*/
 }
 
 body {
@@ -55,7 +54,7 @@ img {
     justify-content: space-evenly;
 }
 
-.player-score {
+.player-score{
     font-size: 24px;
     font-weight: 700;
 }
@@ -72,4 +71,31 @@ p.score:empty:not(:focus)::before {
 
 h2.data:empty:not(:focus)::before {
     content: attr(data-holder);
+}
+
+.reset-btn {
+    background-color: #1f2937;
+    border: 3px solid white;
+    color: antiquewhite;
+    font-weight: bold;
+    padding: 16px 32px;
+    font-size: 20px;
+    transition-duration: 0.4s;
+}
+
+.reset-btn:hover {
+    background-color: white;
+    color: #1f2937;
+    border: 3px solid #1f2937;
+}
+
+footer {
+    background-color: #1f2937;
+    color: white;
+    font-size: 20px;
+    display: block;
+    width: 100%;
+    position: fixed;
+    padding: 28.5px;
+    bottom: 0;
 }
